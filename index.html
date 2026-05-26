@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FindObjectGame Wiki</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow">FindObjectGame</p>
+            <h1>游戏设计 Wiki</h1>
+          </div>
+        </div>
+        <div class="search-wrap">
+          <label class="sr-only" for="searchInput">搜索知识库</label>
+          <input id="searchInput" type="search" placeholder="搜索系统、玩法、资源、活动" autocomplete="off" />
+        </div>
+        <div class="top-actions">
+          <a class="link-button" id="openIndexLink" href="../Docs/OnlineKnowledge/在线文档索引.md" target="_blank" rel="noreferrer">来源文档</a>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="sidebar" aria-label="知识分类">
+          <div class="side-section">
+            <p class="section-label">设计主题</p>
+            <nav id="categoryNav" class="category-nav"></nav>
+          </div>
+          <div class="side-section">
+            <p class="section-label">标签</p>
+            <div id="tagCloud" class="tag-cloud"></div>
+          </div>
+          <div class="side-foot">
+            <span id="generatedAt"></span>
+          </div>
+        </aside>
+
+        <section class="content">
+          <div class="overview-band">
+            <div class="overview-copy">
+              <p class="section-label">新成员快速理解</p>
+              <div id="statStrip" class="stat-strip"></div>
+            </div>
+            <img class="map-art" src="./assets/knowledge-map.png" alt="FindObjectGame design map" />
+          </div>
+
+          <div class="result-toolbar">
+            <p id="resultCount"></p>
+            <div id="typeFilters" class="type-filters" aria-label="阅读对象"></div>
+          </div>
+
+          <div id="itemGrid" class="item-grid" aria-label="知识条目"></div>
+        </section>
+
+        <aside class="detail" aria-label="条目详情">
+          <article id="detailPanel" class="detail-panel"></article>
+        </aside>
+      </main>
+    </div>
+
+    <script src="./data.generated.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
